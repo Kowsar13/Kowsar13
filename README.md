@@ -5,12 +5,12 @@
 
 <div align="center">
 
-# Hi, I'm MD. Akhtarujjaman Siddiquee 👋
+# Hi, I'm MD. Kowsar Islam 👋
 
 ### IoT & Robotics Engineering Student • Embedded Systems • Flutter Developer • Researcher
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akhtarujjaman-siddiquee-sujon)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:akhtarujjamansiddiquee@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kowsar-k32021)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kowsarislam2121@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://akhtarujjaman007.github.io/Modern-Responsive-Portfolio)
 
 </div>
