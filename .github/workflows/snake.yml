@@ -1,0 +1,43 @@
+# Generates the animated "contribution snake" that eats your GitHub
+# contribution graph, and publishes it to a branch called `output`.
+#
+# Setup:
+# 1. In your Kowsar13/Kowsar13 repo, create the file .github/workflows/snake.yml
+#    and paste this content in.
+# 2. Commit it to `main`. GitHub Actions will run it automatically
+#    (on push, and once a day on the schedule below).
+# 3. After the first run finishes (check the "Actions" tab), an `output`
+#    branch will appear with the generated SVGs. The README's snake image
+#    tag already points at it, so it will just start working.
+
+name: generate-snake-animation
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # once a day, 00:00 UTC
+  workflow_dispatch: {}    # lets you trigger it manually from the Actions tab
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate contribution snake SVG
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Kowsar13
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Push output to the "output" branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
